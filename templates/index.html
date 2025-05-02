@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous">
+    <title>Планеты</title>
+    <style>
+        .mars_app_container {
+           padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mars_app_container">
+        <h1>Результаты отбора</h1>
+        <h1>Претендента на участие в миссии {{ nickname }}:</h1>
+        {%  if rating >= 50 %}
+        <div class="alert alert-success" role="alert">
+            <h6>Поздравляем! Ваш рейтинг после этапа отбора {{ level }}</h6>
+        </div>
+        {% else %}
+        <div class="alert alert-secondary" role="alert">
+            <h6>Ваш рейтинг после этапа отбора {{ level }}</h6>
+        </div>
+        {% endif %}
+        <h6>составляет {{ rating }}{%  if rating >= 50 %}!{% endif %}</h6>
+        <div class="alert alert-warning" role="alert">
+            <h6>Желаем удачи!</h6>
+        </div>
+    </div>
+</body>
+</html>

@@ -8,7 +8,7 @@ def main():
 
 
 @app.route('/results/<nickname>/<int:level>/<float:rating>')
-def get_choice(nickname, level, rating):
+def get_rating_result(nickname, level, rating):
     return render_template(
         'index.html',
         nickname=nickname,
